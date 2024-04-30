@@ -24,9 +24,7 @@ const connectDB=async()=>{
     }
 }
 
-app.get("/", (req,res)=>{
-    res.send("Hello");
-})
+
 
 //middlewares
 dotenv.config()
@@ -38,6 +36,7 @@ app.use("/api/auth",authRoute)
 app.use("/api/users",userRoute)
 app.use("/api/posts",postRoute)
 app.use("/api/comments",commentRoute)
+
 
 //image upload
 const storage=multer.diskStorage({
